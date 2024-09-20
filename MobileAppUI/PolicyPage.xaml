@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local1="clr-namespace:MobileAppUI"
+             x:Class="MobileAppUI.PolicyPage"   BackgroundColor="#EFF1F5" >
+
+    <ContentPage.BindingContext>
+
+        <local1:PolicyMenu></local1:PolicyMenu>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Label Text="My Policies" FontSize="30" FontFamily="Roboto Medium" Padding="20,0,0,0" TextColor="#555555"></Label>
+        <ListView ItemsSource="{Binding Policys}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped" SeparatorVisibility="None" >
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+
+                        <StackLayout >
+
+                            <Grid Padding="10">
+                                <Frame CornerRadius="20">
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout >
+                                            <Image Grid.RowSpan="3" VerticalOptions="StartAndExpand" Source="{Binding Image}" HeightRequest="25"></Image>
+                                        </StackLayout>
+                                        <StackLayout Margin="20,0,0,0">
+                                                <Label Text="{Binding PolicyName}"  Grid.Column="1" VerticalOptions="Center" FontSize="16" FontFamily="Roboto Medium" TextColor="#555555"></Label>
+                                        </StackLayout >
+                                        <StackLayout HorizontalOptions="EndAndExpand" >
+                                            <Image Source="{Binding Icon}" Grid.Column="2" Grid.Row="2" ></Image>
+
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                            <ListView ItemsSource="{Binding Policy_Details}" IsVisible="{Binding IsVisible}" HasUnevenRows="True" SeparatorVisibility="None">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Padding="40,0,0,0" Orientation="Vertical">
+
+                                                <StackLayout Orientation="Horizontal" HeightRequest="30"  Padding="0,20,0,0" >
+                                                    <StackLayout WidthRequest="300" >
+                                                            <Label Text="{Binding Submenu1}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" FontSize="16"  FontFamily="Roboto Light" TextColor="#555555"></Label>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Image Source="side" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" ></Image>
+                                                    </StackLayout>
+
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal"  Padding="0,20,0,0" >
+                                                    <StackLayout WidthRequest="300" >
+                                                            <Label Text="{Binding Submenu2}" Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" FontSize="16"  FontFamily="Roboto Light" TextColor="#555555"></Label>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Image Source="side" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand" ></Image>
+                                                    </StackLayout>
+
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal"   Padding="0,20,0,0" >
+                                                    <StackLayout WidthRequest="300" >
+                                                            <Label Text="{Binding Submenu3}" Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand"  FontSize="16"  FontFamily="Roboto Light" TextColor="#555555"></Label>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Image Source="side" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand" ></Image>
+                                                    </StackLayout>
+
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal"  Padding="0,20,0,0"  >
+                                                    <StackLayout WidthRequest="300" >
+                                                            <Label Text="{Binding Submenu4}" Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand"  FontSize="16"  FontFamily="Roboto Light" TextColor="#555555"></Label>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Image Source="side" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand" ></Image>
+                                                    </StackLayout>
+
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal"  Padding="0,20,0,0"  >
+                                                    <StackLayout WidthRequest="300" >
+                                                            <Label Text="{Binding Submenu5}" Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" FontSize="16"  FontFamily="Roboto Light" TextColor="#555555"></Label>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Image Source="side" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand" ></Image>
+                                                    </StackLayout>
+
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal"  Padding="0,20,0,0"  >
+                                                    <StackLayout WidthRequest="300" >
+                                                            <Label Text="{Binding Submenu6}" Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand"  FontSize="16"  FontFamily="Roboto Light" TextColor="#555555"></Label>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Image Source="side" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand" ></Image>
+                                                    </StackLayout>
+
+                                                </StackLayout>
+
+
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
+                        </StackLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

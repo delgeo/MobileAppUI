@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="MobileAppUI.MainPage" BackgroundColor="#EFF1F5"  NavigationPage.HasNavigationBar="False"  >
+
+    <StackLayout BackgroundColor="#EFF1F5" >
+        <StackLayout Orientation="Vertical">
+            <StackLayout>
+                <Label Text="Company" FontSize="40" Margin="20,20,0,0" FontFamily="Roboto Medium" TextColor="#555555"/>
+                <Label Text="We are a company" FontSize="Subtitle" Margin="40,0" FontFamily="Roboto Light" TextColor="#555555"/>
+            </StackLayout>
+            <StackLayout Margin="0,-45,40,0">
+                <Frame HeightRequest="20" HorizontalOptions="End" HasShadow="True" xct:ShadowEffect.Color="Gray" xct:ShadowEffect.OffsetX="1">
+                    <Image Source="transe.png"/>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Margin="30,35,0,0">
+
+            <Label Text="Choose your power" FontFamily="Roboto Medium" TextColor="#555555"/>
+        </StackLayout>
+
+        <StackLayout
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Orientation="Horizontal"
+           
+                    >
+            <Frame  Margin="30,0,20,0" HasShadow="True" CornerRadius="15">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="TapGestureRecognizer_Tapped_1"/>
+                </Frame.GestureRecognizers>
+                <StackLayout 
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 HeightRequest="160"
+                                 WidthRequest="140"
+                             >
+                    <Image Source="policy"  HorizontalOptions="StartAndExpand" Margin="15"/>
+                    <Label Text="My Policies" FontSize="18" FontFamily="Roboto Medium" TextColor="#555555">
+
+                    </Label>
+
+                    <Label Text="Policies that meet your needs" FontSize="12" FontFamily="Roboto Regular" TextColor="#555555"/>
+                </StackLayout>
+            </Frame>
+            <Frame  Margin="0,0,30,0" CornerRadius="15" >
+                <StackLayout
+                                  VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                HeightRequest="160"
+                                 WidthRequest="140"
+                                >
+                    <Image Source="claim" HorizontalOptions="StartAndExpand" Margin="15" HeightRequest="45" />
+                    <Label Text="Your Claims"  FontSize="18" FontFamily="Roboto Medium" TextColor="#555555"/>
+                    <Label Text="Your claim and detials"  FontSize="12" FontFamily="Roboto Regular" TextColor="#555555"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+        <StackLayout
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Orientation="Horizontal"
+                     Margin="0,10,0,0"
+                    >
+            <Frame  Margin="30,0,20,0" HasShadow="True" CornerRadius="15">
+                <StackLayout 
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 HeightRequest="160"
+                                 WidthRequest="140"
+                             >
+                    <Image Source="quote"  HorizontalOptions="StartAndExpand" Margin="15"/>
+                    <Label Text="Get a Quote"   FontSize="18" FontFamily="Roboto Medium" TextColor="#555555"/>
+                    <Label Text="Reach out at our executives"   FontSize="12" FontFamily="Roboto Regular" TextColor="#555555"/>
+                </StackLayout>
+            </Frame>
+            <Frame  Margin="0,0,30,0" CornerRadius="15" >
+                <StackLayout
+                                  VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                HeightRequest="160"
+                                 WidthRequest="140"
+                                >
+                    <Image Source="mpay" HorizontalOptions="StartAndExpand" Margin="15" HeightRequest="45" />
+                    <Label Text="Mobile Pay"  FontSize="18" FontFamily="Roboto Medium" TextColor="#555555"/>
+                    <Label Text="Stay Healthy              Live long!"   FontSize="12" FontFamily="Roboto Regular" TextColor="#555555"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+        <StackLayout >
+
+            <Frame  Margin="30" 
+                             CornerRadius="15">
+                <StackLayout
+                       WidthRequest="0"
+                        HeightRequest="24"
+                        Orientation="Horizontal"
+                        Spacing="10">
+                    <Image Source="get1" HeightRequest="0" WidthRequest="60"/>
+                    <Label Text="Get Assistance from Expert" FontSize="18" FontFamily="Roboto Medium" TextColor="#555555"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <StackLayout
+                   HeightRequest="80"
+                   Spacing="15"
+                   Margin="20,30,10,0"
+          
+                    Orientation="Horizontal">
+
+            <Frame 
+                        CornerRadius="15">
+                <StackLayout
+                             HeightRequest="0" WidthRequest="50">
+                    <Image Source="call1" HeightRequest="20" WidthRequest="20" />
+                    <Label Text="Support" FontSize="12" FontFamily="Roboto Medium" TextColor="#555555"/>
+                </StackLayout>
+            </Frame>
+            <Frame
+                        CornerRadius="15"
+                        >
+                <StackLayout>
+                    <Image Source="document"   HeightRequest="20" WidthRequest="20"/>
+                    <Label Text="Documents" FontSize="12" FontFamily="Roboto Medium" TextColor="#555555"/>
+                </StackLayout>
+            </Frame>
+            <Frame
+                         CornerRadius="15">
+                <StackLayout
+                            Orientation="Horizontal"
+                            Margin="10">
+                    <Image Source="buy1"   HeightRequest="20" WidthRequest="30"/>
+                    <Label Text="Products" FontSize="12" FontFamily="Roboto Medium" TextColor="#555555"/>
+                </StackLayout>
+
+            </Frame>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
